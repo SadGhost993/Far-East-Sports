@@ -1,7 +1,10 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use \App\Http\Controllers\TeamController;
+use \App\Http\Controllers\TournamentController;
+use \App\Http\Controllers\TournamentEventController;
+use \App\Http\Controllers\KindOfSportController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +17,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+//Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//    return $request->user();
+//});
+
+Route::apiResource('kind_of_sport', KindOfSportController::class)->except(['show']);
+Route::apiResource('team', TeamController::class)->except(['show', 'update']);
+Route::apiResource('tournament', TournamentController::class)->except(['show']);
+Route::apiResource('TournamentEvent', TournamentEventController::class)->except(['show']);
