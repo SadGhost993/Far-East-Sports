@@ -24,4 +24,4 @@ use \App\Http\Controllers\KindOfSportController;
 Route::apiResource('kind_of_sport', KindOfSportController::class)->except(['show']);
 Route::apiResource('team', TeamController::class);
 Route::apiResource('tournament', TournamentController::class);
-Route::apiResource('TournamentEvent', TournamentEventController::class)->except(['show']);
+Route::apiResource('tournamentEvent', TournamentEventController::class)->except(['show', 'update']);
