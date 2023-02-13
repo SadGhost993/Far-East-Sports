@@ -1,0 +1,506 @@
+@font-face {
+    Font-family: jost;
+    src: url("../src/fonts/Jost-Bold.ttf");
+}
+
+@font-face {
+    Font-family: Noize-Sport;
+    src: url("../src/fonts/NoizeSport-Regular.otf");
+}
+
+@font-face {
+    Font-family: MontserratBlack;
+    src: url("../src/fonts/Montserrat-Black.ttf");
+}
+
+@font-face {
+    Font-family: MontserratBold;
+    src: url("../src/fonts/Montserrat-Bold.ttf");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("../img/background.png") no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+
+    color: white;
+}
+
+.header, .kind-sport,
+.broadcast, .about,
+.news, .footer{
+    padding: 0 10px 0 10px;
+    max-width: 1200px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0 auto 50px auto;
+    padding: 0 30px 0 30px;
+
+    height: 70px;
+}
+
+.header__logo {
+    display: flex;
+
+    width: 50px;
+    height: 50px;
+
+    background: url("../img/logo.png") no-repeat;
+    background-size: cover;
+}
+
+.nav {
+    display: flex;
+
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+
+    font-family: "jost", sans-serif;
+    font-size: 28px;
+
+}
+
+.nav__link {
+    margin-right: 30px;
+}
+
+.social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 120px;
+
+    margin: 0;
+    padding: 0;
+}
+
+.social__link {
+    width: 38px;
+    height: 38px;
+
+    list-style-type: none;
+
+}
+
+.social__telegram {
+    background: url("../img/telegram.svg") no-repeat;
+}
+
+.social__insta {
+    background: url("../img/insta.svg") no-repeat;
+}
+
+.social__vk {
+    background: url("../img/vk.svg") no-repeat;
+}
+
+.kind-sport {
+    display: grid;
+    justify-content: space-between;
+
+    grid-template-areas:
+    "h h i i"
+    "v t b f"
+    "s d e k";
+
+    row-gap: 100px;
+
+    margin: 0 auto 50px auto;
+
+    font-family: "Noize-Sport";
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 100%;
+}
+
+.hockey {
+    grid-area: h;
+}
+
+.ice-box {
+    grid-area: i;
+}
+
+.volta-football {
+    grid-area: v;
+}
+
+.table-tennis {
+    grid-area: t;
+}
+
+.badminton {
+    grid-area: b;
+}
+
+.footvolley {
+    grid-area: f;
+}
+
+.smart-hockey {
+    grid-area: s;
+}
+
+.darts {
+    grid-area: d;
+}
+
+.esports {
+    grid-area: e;
+}
+
+.kabadoi {
+    grid-area: k;
+}
+
+.hockey, .ice-box, .volta-football,
+.table-tennis, .badminton, .footvolley,
+.smart-hockey, .darts, .esports,
+.kabadoi {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.hockey__img {
+    min-width: 361px;
+    min-height: 113px;
+
+    background: url("../img/logo-dvhl.png") no-repeat;
+}
+
+.ice-box__img {
+    min-width: 336px;
+    min-height: 126px;
+
+    background: url("../img/logo-box.png") no-repeat;
+}
+
+.volta-football__img {
+    min-width: 160px;
+    min-height: 183px;
+
+    background: url("../img/1.png") no-repeat;
+}
+
+.table-tennis__img {
+    min-width: 160px;
+    min-height: 183px;
+
+    background: url("../img/1.png") no-repeat;
+}
+
+.badminton__img {
+    min-width: 160px;
+    min-height: 183px;
+
+    background: url("../img/1.png") no-repeat;
+}
+
+.footvolley__img {
+    min-width: 160px;
+    min-height: 183px;
+
+    background: url("../img/1.png") no-repeat;
+}
+
+.smart-hockey__img {
+    min-width: 160px;
+    min-height: 183px;
+
+    background: url("../img/1.png") no-repeat;
+}
+
+.darts__img {
+    min-width: 160px;
+    min-height: 183px;
+
+    background: url("../img/1.png") no-repeat;
+}
+
+.esports__img {
+    min-width: 160px;
+    min-height: 183px;
+
+    background: url("../img/1.png") no-repeat;
+}
+
+.kabadoi__img {
+    min-width: 160px;
+    min-height: 183px;
+
+    background: url("../img/1.png") no-repeat;
+}
+
+.broadcast {
+    margin: 0 auto 100px auto;
+}
+
+.swiper{
+    width: inherit;
+}
+
+.arrow-container{
+    display: flex;
+
+    width: inherit;
+
+    position: relative;
+}
+
+.broadcast__title {
+    padding-left: 10px;
+    font-family: "jost";
+    font-weight: 700;
+    font-size: 32px;
+
+    margin: 0 0 50px 0;
+
+    border-left: 3px solid white;
+}
+
+.ad {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    margin-right: 30px;
+
+    max-width: 270px;
+
+    font-family: "jost";
+    font-size: 12px;
+    border: 1px solid white;
+    border-radius: 1px;
+    background: black;
+}
+
+.ad_date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 15px 0 0 0;
+
+
+}
+
+.ad_date p {
+    margin: 0;
+    padding: 0;
+}
+
+.ad__team-section {
+    display: flex;
+    justify-content: space-around;
+}
+
+.news-button-next, .button-next{
+    position: absolute;
+    top: 40%;
+    right: -5%;
+
+    width: 30px;
+    height: 38px;
+
+    transform: rotate(180deg);
+    background: url("../img/arrow.svg") no-repeat;
+}
+
+.news-button-prev, .button-prev{
+    position: absolute;
+    top: 40%;
+    left: -5%;
+
+    width: 30px;
+    height: 38px;
+
+    background: url("../img/arrow.svg") no-repeat;
+}
+
+.team {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.team__icon {
+    width: 32px;
+    height: 40px;
+
+    background: url("../img/hockey-player 1.png") no-repeat;
+}
+
+.team__title {
+}
+
+.ad__title {
+    display: flex;
+
+    justify-content: center;
+
+    background: white;
+    color: black;
+
+    font-family: "Noize-Sport", serif;
+    font-size: 21px;
+}
+
+.ad__title p {
+    padding: 0;
+    margin: 5px 0 5px 0;
+}
+
+.ad__background {
+    background: url("../img/bd 1.png") no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+    margin: 0 auto 100px auto;
+}
+
+.about__title {
+    margin: 0 0 30px 0;
+
+    font-family: MontserratBlack;
+    font-size: 46px;
+    color: #D39C41;
+}
+
+.about__item {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+}
+
+.about__text {
+    margin: 0 auto 0 0;
+
+    font-family: MontserratBold;
+    font-size: 27px;
+    line-height: 32px;
+}
+
+.poster {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 0 0 30px;
+
+    min-width: 580px;
+    height: 335px;
+
+    border-radius: 15px;
+    box-shadow: 0 0 40px 4px rgb(227 227 227 / 20%);
+
+    background: url("../img/about.png") no-repeat;
+    background-position: center;
+}
+
+.poster__title{
+    width: 182px;
+
+    font-family: "Noize-Sport", serif;
+    font-size: 60px;
+    color: #DF9923;
+}
+
+.news {
+    /*position: relative;*/
+    margin: 0 auto 100px auto;
+}
+
+.news__title {
+    margin: 0 0 50px 0;
+
+    text-align: center;
+
+    font-family: MontserratBlack;
+    font-size: 46px;
+    color: #D39C41;
+}
+.news__section{
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+}
+
+.news-swiper{
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+}
+
+.news__item{
+    display: flex;
+    flex-direction: column;
+
+    max-width: 540px;
+    margin-right: 120px;
+}
+
+.news__img {
+    width: 540px;
+    height: 300px;
+
+    background: url("../img/Rectangle 15.png");
+}
+
+.news__text{
+    margin: 20px 0 0 0;
+    font-family: jost;
+    font-size: 29px;
+    text-align: center;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 120px;
+
+    margin: 0 auto;
+}
+
+.footer__logo{
+    width: 75px;
+    height: 75px;
+
+    background: url("../img/logo.png") no-repeat;
+}
+
+.footer__link{
+    font-family: jost;
+    font-size: 32px;
+    color: white;
+    text-decoration: none;
+}
