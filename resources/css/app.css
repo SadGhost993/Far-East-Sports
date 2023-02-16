@@ -18,6 +18,16 @@
     src: url("../src/fonts/Montserrat-Bold.ttf");
 }
 
+@font-face {
+    Font-family: MontserratExtraBold;
+    src: url("../src/fonts/Montserrat-ExtraBold.ttf");
+}
+
+@font-face {
+    Font-family: MontserratMedium;
+    src: url("../src/fonts/Montserrat-Medium.ttf");
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -37,9 +47,10 @@ a {
 
 .header, .kind-sport,
 .broadcast, .about,
-.news, .footer {
+.news, .footer, .container {
     padding: 0 10px 0 10px;
     max-width: 1200px;
+    margin: 0 auto 50px auto;
 }
 
 .header {
@@ -461,7 +472,7 @@ a {
     .news-button-next, .button-next {
         position: absolute;
         top: 40%;
-        right: 0%;
+        right: 0;
 
         width: 30px;
         height: 38px;
@@ -539,7 +550,7 @@ a {
         margin: 0 auto 100px auto;
     }
 
-    .about__title{
+    .about__title {
         margin-bottom: 20px;
     }
 
@@ -570,7 +581,7 @@ a {
         display: none;
     }
 
-    .footer{
+    .footer {
         flex-direction: column;
 
         height: 100%;
@@ -581,4 +592,234 @@ a {
     .kind-sport__text {
         font-size: 11px;
     }
+}
+
+/* страница правил */
+
+.our-rules {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 50px;
+}
+
+.our-rules__title {
+    text-align: center;
+
+    margin: 0 0 70px 0;
+
+    color: #DF9923;
+
+    font-family: MontserratExtraBold;
+    font-size: 64px;
+}
+
+.our-rules__text-title, .sports-rules__title{
+
+    margin: 0 0 30px 0;
+
+    color: #DF9923;
+
+    text-decoration: underline;
+    font-family: Noize-Sport, serif;
+    font-size: 42px;
+}
+
+.our-rules__text, .sports-rules__text{
+    margin: 0 0 20px 0;
+    font-family: MontserratMedium;
+    font-weight: lighter;
+    font-size: 23px;
+    line-height: 32px;
+    letter-spacing: 2px;
+}
+
+.our-rules__grid{
+    display: grid;
+
+    grid-column-gap: 30px;
+    grid-row-gap: 15px;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    grid-template-areas:
+    "a b c d"
+    "i f g q";
+}
+
+.our-rules__photo{
+  width: 100%;
+}
+
+.our-rules__grid-item-1{
+    grid-area: a;
+}
+
+.our-rules__grid-item-2{
+    grid-area: b;
+}
+
+.our-rules__grid-item-3{
+    grid-area: c;
+}
+
+.our-rules__grid-item-4{
+    grid-area: d;
+}
+
+.our-rules__grid-item-5{
+    grid-area: i;
+}
+
+.our-rules__grid-item-6{
+    grid-area: f;
+}
+
+.our-rules__grid-item-7{
+    grid-area: g;
+}
+
+.our-rules__grid-item-8{
+    grid-area: q;
+}
+
+.our-rules__grid-item-5, .our-rules__grid-item-6,
+.our-rules__grid-item-7, .our-rules__grid-item-8{
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+
+    padding:  20px 10px 20px 10px;
+
+    font-family: MontserratExtraBold;
+    background: #DF9923;
+}
+
+.our-rules__numeric{
+    margin: 0;
+
+    font-size: 55px;
+}
+
+.our-rules__subtitle{
+    margin: 0 0 10px 0;
+
+    font-size: 22px;
+}
+
+.our-rules__subtext{
+    font-size: 16px;
+}
+
+.sports-rules__item{
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 50px;
+}
+
+.sports-rules__block{
+    display: flex;
+    flex-direction: row;
+}
+
+.sports-rules__left-side{
+    width: 50%;
+    margin-right: 20px;
+}
+
+.sports-rules__right-side{
+    display: flex;
+    flex-flow: wrap;
+
+    align-items: center;
+
+    width: 50%;
+}
+
+.peculiarity__list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.peculiarity__item{
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 15px;
+
+}
+
+.peculiarity__marker{
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 81px;
+    min-height: 81px;
+
+    margin: 0 10px 0 0;
+
+    font-family: MontserratExtraBold;
+    font-size: 30px;
+
+    background: #DF9923;
+}
+
+.peculiarity__text{
+    margin: 0;
+    font-family: MontserratExtraBold;
+    font-size: 22px;
+    line-height: 21px;
+}
+
+.sports-rules__sport-name{
+    margin: 0;
+    writing-mode: vertical-rl;
+
+    font-family: Noize-Sport, serif;
+    font-size: 58px;
+    line-height: 100%;
+    hyphens: auto;
+    overflow-wrap: normal;
+}
+
+.sport-rules__img{
+    width: 70%;
+    height: 100%;
+}
+
+.sports-rules__container-for-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    hyphens: auto;
+    width: 30%;
+    height: 100%;
+
+    background: #DF9923;
+}
+
+.sports-rules__list-subtitle{
+    font-family: MontserratBold;
+    font-size: 36px;
+    color: #DF9923;
+    margin: 0 0 20px 0;
+}
+
+.sports-rules__right-top{
+    display: flex;
+    width: 100%;
+    height: 65%;
+
+    margin-bottom: 20px;
+}
+
+.sports-rules__right-bottom{
+    display: flex;
+    flex-direction: column;
 }
