@@ -24,15 +24,20 @@ body {
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
     url("../img/background.png") no-repeat;
     background-position: center center;
-    background-attachment: fixed;
+    /*background-attachment: fixed;*/
     background-size: cover;
 
     color: white;
 }
 
+a {
+    color: white;
+    text-decoration: none;
+}
+
 .header, .kind-sport,
 .broadcast, .about,
-.news, .footer{
+.news, .footer {
     padding: 0 10px 0 10px;
     max-width: 1200px;
 }
@@ -54,7 +59,6 @@ body {
     width: 50px;
     height: 50px;
 
-    background: url("../img/logo.png") no-repeat;
     background-size: cover;
 }
 
@@ -82,8 +86,8 @@ body {
 
     width: 120px;
 
-    margin: 0;
     padding: 0;
+    margin: 0;
 }
 
 .social__link {
@@ -91,19 +95,6 @@ body {
     height: 38px;
 
     list-style-type: none;
-
-}
-
-.social__telegram {
-    background: url("../img/telegram.svg") no-repeat;
-}
-
-.social__insta {
-    background: url("../img/insta.svg") no-repeat;
-}
-
-.social__vk {
-    background: url("../img/vk.svg") no-repeat;
 }
 
 .kind-sport {
@@ -116,13 +107,11 @@ body {
     "s d e k";
 
     row-gap: 100px;
+    /*column-gap: 30px;*/
 
     margin: 0 auto 50px auto;
 
-    font-family: "Noize-Sport";
-    font-size: 22px;
-    font-weight: 300;
-    line-height: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .hockey {
@@ -176,85 +165,32 @@ body {
     align-items: center;
 }
 
-.hockey__img {
-    min-width: 361px;
-    min-height: 113px;
-
-    background: url("../img/logo-dvhl.png") no-repeat;
+.kind-sport__big-img {
+    width: 80%;
 }
 
-.ice-box__img {
-    min-width: 336px;
-    min-height: 126px;
-
-    background: url("../img/logo-box.png") no-repeat;
+.kind-sport__img {
+    width: 70%;
 }
 
-.volta-football__img {
-    min-width: 160px;
-    min-height: 183px;
+.kind-sport__text {
+    margin: 30px 0 0 0;
 
-    background: url("../img/1.png") no-repeat;
-}
+    font-family: "Noize-Sport";
+    font-size: 22px;
+    line-height: 100%;
 
-.table-tennis__img {
-    min-width: 160px;
-    min-height: 183px;
-
-    background: url("../img/1.png") no-repeat;
-}
-
-.badminton__img {
-    min-width: 160px;
-    min-height: 183px;
-
-    background: url("../img/1.png") no-repeat;
-}
-
-.footvolley__img {
-    min-width: 160px;
-    min-height: 183px;
-
-    background: url("../img/1.png") no-repeat;
-}
-
-.smart-hockey__img {
-    min-width: 160px;
-    min-height: 183px;
-
-    background: url("../img/1.png") no-repeat;
-}
-
-.darts__img {
-    min-width: 160px;
-    min-height: 183px;
-
-    background: url("../img/1.png") no-repeat;
-}
-
-.esports__img {
-    min-width: 160px;
-    min-height: 183px;
-
-    background: url("../img/1.png") no-repeat;
-}
-
-.kabadoi__img {
-    min-width: 160px;
-    min-height: 183px;
-
-    background: url("../img/1.png") no-repeat;
 }
 
 .broadcast {
     margin: 0 auto 100px auto;
 }
 
-.swiper{
+.swiper {
     width: inherit;
 }
 
-.arrow-container{
+.arrow-container {
     display: flex;
 
     width: inherit;
@@ -295,8 +231,6 @@ body {
     flex-direction: column;
 
     padding: 15px 0 0 0;
-
-
 }
 
 .ad_date p {
@@ -309,7 +243,7 @@ body {
     justify-content: space-around;
 }
 
-.news-button-next, .button-next{
+.news-button-next, .button-next {
     position: absolute;
     top: 40%;
     right: -5%;
@@ -321,7 +255,7 @@ body {
     background: url("../img/arrow.svg") no-repeat;
 }
 
-.news-button-prev, .button-prev{
+.news-button-prev, .button-prev {
     position: absolute;
     top: 40%;
     left: -5%;
@@ -410,8 +344,8 @@ body {
 
     margin: 0 0 0 30px;
 
-    min-width: 580px;
-    height: 335px;
+    width: 50%;
+    height: 300px;
 
     border-radius: 15px;
     box-shadow: 0 0 40px 4px rgb(227 227 227 / 20%);
@@ -420,7 +354,7 @@ body {
     background-position: center;
 }
 
-.poster__title{
+.poster__title {
     width: 182px;
 
     font-family: "Noize-Sport", serif;
@@ -442,14 +376,15 @@ body {
     font-size: 46px;
     color: #D39C41;
 }
-.news__section{
+
+.news__section {
     display: flex;
     justify-content: space-between;
 
     width: 100%;
 }
 
-.news-swiper{
+.news-swiper {
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -459,12 +394,12 @@ body {
     z-index: 1;
 }
 
-.news__item{
+.news__item {
     display: flex;
     flex-direction: column;
 
     max-width: 540px;
-    margin-right: 120px;
+    margin-right: 80px;
 }
 
 .news__img {
@@ -474,14 +409,14 @@ body {
     background: url("../img/Rectangle 15.png");
 }
 
-.news__text{
+.news__text {
     margin: 20px 0 0 0;
     font-family: jost;
     font-size: 29px;
     text-align: center;
 }
 
-.footer{
+.footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -489,18 +424,161 @@ body {
     height: 120px;
 
     margin: 0 auto;
+    padding-bottom: 30px;
 }
 
-.footer__logo{
+.footer__logo {
+    margin-bottom: 20px;
+
     width: 75px;
     height: 75px;
 
     background: url("../img/logo.png") no-repeat;
 }
 
-.footer__link{
+.footer__link {
     font-family: jost;
     font-size: 32px;
     color: white;
     text-decoration: none;
+
+    margin-bottom: 20px;
+}
+
+@media (max-width: 1350px) {
+    .header, .kind-sport,
+    .broadcast, .about,
+    .news, .footer {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+
+    .swiper, .news-swiper {
+        max-width: 90%;
+    }
+
+    .news-button-next, .button-next {
+        position: absolute;
+        top: 40%;
+        right: 0%;
+
+        width: 30px;
+        height: 38px;
+
+        transform: rotate(180deg);
+        background: url("../img/arrow.svg") no-repeat;
+    }
+
+    .news-button-prev, .button-prev {
+        position: absolute;
+        top: 40%;
+        left: 0;
+
+        width: 30px;
+        height: 38px;
+
+        background: url("../img/arrow.svg") no-repeat;
+    }
+}
+
+@media (max-width: 1000px) {
+    .about__text {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .poster {
+        height: 250px;
+    }
+
+    .footer__link {
+        font-size: 24px;
+    }
+
+    .nav {
+        font-size: 20px;
+    }
+
+    .news__text {
+        font-size: 22px;
+    }
+
+    .kind-sport__text {
+        font-size: 16px;
+    }
+
+    .about__title, .news__title {
+        font-size: 40px;
+    }
+
+    .poster__title {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 800px) {
+    .kind-sport {
+        grid-template-areas:
+        "h i"
+        "v t"
+        "s d"
+        "b e"
+        "f k";
+
+        row-gap: 30px;
+        column-gap: 30px;
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about {
+        flex-direction: column;
+        align-items: center;
+
+        margin: 0 auto 100px auto;
+    }
+
+    .about__title{
+        margin-bottom: 20px;
+    }
+
+    .about__item {
+        width: 80%;
+        margin-bottom: 50px;
+    }
+
+    .poster {
+        width: 80%;
+        margin: 0;
+    }
+
+    .swiper, .news-swiper {
+        width: 80%;
+    }
+
+
+    .broadcast__title {
+        font-size: 28px;
+    }
+
+    .kind-sport__img {
+        width: 50%;
+    }
+
+    .header {
+        display: none;
+    }
+
+    .footer{
+        flex-direction: column;
+
+        height: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .kind-sport__text {
+        font-size: 11px;
+    }
 }

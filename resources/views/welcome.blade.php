@@ -1,19 +1,15 @@
 <!DOCTYPE html>
-<html lang="<?php echo e(str_replace('_', '-', app()->getLocale())); ?>">
+<html lang="ru">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Far East Sports </title>
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script
-    <?php echo app('Illuminate\Foundation\Vite')(['resources/css/app.css']); ?>
+    @vite('resources/css/app.css')
 </head>
-<body>
 <header class="header">
-    <div class="header__logo"></div>
+    <img src="{{Vite::asset('resources/img/logo.png')}}" alt="" class="header__logo">
     <ul class="nav">
         <li class="nav__link">Трансляции</li>
         <li class="nav__link">Правила</li>
@@ -21,52 +17,58 @@
         <li class="nav__link">О нас</li>
     </ul>
     <ul class="social">
-        <li class="social__link social__telegram"></li>
-        <li class="social__link social__vk"></li>
-        <li class="social__link social__insta"></li>
+        <li class="social__link">
+            <img src="{{Vite::asset('resources//img/telegram.svg')}}" alt="">
+        </li>
+        <li class="social__link">
+            <img src="{{Vite::asset('resources/img/insta.svg')}}" alt="">
+        </li>
+        <li class="social__link">
+            <img src="{{Vite::asset('resources/img/vk.svg')}}" alt="">
+        </li>
     </ul>
 </header>
 <section class="kind-sport">
-    <div class="hockey">
-        <div class="hockey__img"></div>
+    <a href="/" class="hockey">
+        <img src="{{Vite::asset('resources/img/logo-dvhl.png')}}" alt="" class="kind-sport__big-img">
         <p class="kind-sport__text">DVHL 3X3</p>
-    </div>
-    <div class="ice-box">
-        <div class="ice-box__img"></div>
+    </a>
+    <a href="/" class="ice-box">
+        <img src="{{Vite::asset('resources/img/logo-box.png')}}" alt="" class="kind-sport__big-img">
         <p class="kind-sport__text">ICE BOX</p>
-    </div>
-    <div class="volta-football">
-        <div class="volta-football__img"></div>
+    </a>
+    <a href="/" class="volta-football">
+        <img src="{{Vite::asset('resources/img/1.png')}}" alt="" class="kind-sport__img">
         <p class="kind-sport__text">VOLTA FOOTBALL</p>
-    </div>
-    <div class="table-tennis">
-        <div class="table-tennis__img"></div>
+    </a>
+    <a href="/" class="table-tennis">
+        <img src="{{Vite::asset('resources/img/2.png')}}" alt="" class="kind-sport__img">
         <p class="kind-sport__text">TABLE TENNIS</p>
-    </div>
-    <div class="badminton">
-        <div class="badminton__img"></div>
+    </a>
+    <a href="/" class="badminton">
+        <img src="{{Vite::asset('resources/img/3.png')}}" alt="" class="kind-sport__img">
         <p class="kind-sport__text">BADMINTON</p>
-    </div>
-    <div class="footvolley">
-        <div class="footvolley__img"></div>
+    </a>
+    <a href="/" class="footvolley">
+        <img src="{{Vite::asset('resources/img/4.png')}}" alt="" class="kind-sport__img">
         <p class="kind-sport__text">FOOTVOLLEY</p>
-    </div>
-    <div class="smart-hockey">
-        <div class="smart-hockey__img"></div>
+    </a>
+    <a href="/" class="smart-hockey">
+        <img src="{{Vite::asset('resources/img/5.png')}}" alt="" class="kind-sport__img">
         <p class="kind-sport__text">SMART HOCHEY</p>
-    </div>
-    <div class="darts">
-        <div class="darts__img"></div>
+    </a>
+    <a href="/" class="darts">
+        <img src="{{Vite::asset('resources/img/6.png')}}" alt="" class="kind-sport__img">
         <p class="kind-sport__text">DARTS</p>
-    </div>
-    <div class="esports">
-        <div class="esports__img"></div>
+    </a>
+    <a href="/" class="esports">
+        <img src="{{Vite::asset('resources/img/7.png')}}" alt="" class="kind-sport__img">
         <p class="kind-sport__text">eSPORTS</p>
-    </div>
-    <div class="kabadoi">
-        <div class="kabadoi__img"></div>
+    </a>
+    <a href="/" class="kabadoi">
+        <img src="{{Vite::asset('resources/img/8.png')}}" alt="" class="kind-sport__img">
         <p class="kind-sport__text">HABADOI</p>
-    </div>
+    </a>
 </section>
 <section class="broadcast">
     <h3 class="broadcast__title">Смотреть</h3>
@@ -316,12 +318,17 @@
     <a class="footer__link" href="/">Вход в скаут систему</a>
     <a class="footer__link" href="/">Email: fareastsport@bk.ru</a>
     <ul class="social">
-        <li class="social__link social__telegram"></li>
-        <li class="social__link social__vk"></li>
-        <li class="social__link social__insta"></li>
+        <li class="social__link">
+            <img src="{{Vite::asset('resources//img/telegram.svg')}}" alt="">
+        </li>
+        <li class="social__link">
+            <img src="{{Vite::asset('resources/img/insta.svg')}}" alt="">
+        </li>
+        <li class="social__link">
+            <img src="{{Vite::asset('resources/img/vk.svg')}}" alt="">
+        </li>
     </ul>
 </footer>
-</body>
 <script>
     const swiper = new Swiper('.swiper', {
 
@@ -339,7 +346,7 @@
         // Optional parameters
         // direction: 'vertical',
         // loop: true,
-        // slidesPerView: 2,
+        // slidesPerView: 1,
         // spaceBetween: 100,
         // // If we need pagination
         // pagination: {
@@ -358,4 +365,5 @@
         },
     });
 </script>
+</body>
 </html>
