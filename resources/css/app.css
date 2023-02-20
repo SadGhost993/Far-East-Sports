@@ -28,6 +28,11 @@
     src: url("../src/fonts/Montserrat-Medium.ttf");
 }
 
+@font-face {
+    Font-family: MontserratSemiBold;
+    src: url("../src/fonts/Montserrat-SemiBold.ttf");
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -822,4 +827,122 @@ a {
 .sports-rules__right-bottom{
     display: flex;
     flex-direction: column;
+}
+
+/* about */
+
+.welcome{
+    margin-top: 300px;
+    margin-bottom: 150px;
+}
+
+.welcome__text-area{
+    width: 50%;
+
+}
+
+
+.welcome__text{
+    margin: 0 0 30px 0;
+
+    color: #DF9923;
+
+    font-family: MontserratExtraBold;
+    font-size: 54px;
+}
+
+.welcome__subtitle{
+    font-family: MontserratSemiBold;
+    font-size: 27px;
+}
+
+.advantage{
+    margin-bottom: 100px;
+}
+
+.advantage__title{
+    text-align: center;
+
+    margin: 0 0 100px 0;
+
+    color: #DF9923;
+
+    font-family: MontserratExtraBold;
+    font-size: 64px;
+}
+
+.advantage__block{
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 50px;
+}
+
+.advantage__item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.advantage__item-image{
+    width: 350px;
+    height: 350px;
+    margin-bottom: 70px;
+}
+
+.advantage__item:nth-child(2) .advantage__item-image{
+    margin-top: 70px;
+
+    width: 400px;
+    height: 280px;
+
+}
+
+.advantage__item-text{
+    margin: 0;
+
+    text-align: center;
+
+    color: #DF9923;
+    font-family: MontserratBold;
+    font-size: 42px;
+}
+
+.advantage__subtext{
+    margin: 0;
+
+    font-family: MontserratMedium;
+    font-size: 24px;
+    line-height: 33px;
+}
+
+.why-us{
+    display: flex;
+
+    margin-bottom: 150px;
+}
+
+.why-us__image-area{
+    width: 50%;
+}
+
+.why-us__text-area{
+    width: 50%;
+}
+
+.why-us__title {
+    margin: 0 0 10px 0;
+
+    color: #DF9923;
+
+    font-family: MontserratExtraBold;
+    font-size: 60px;
+}
+
+.why-us__subtitle{
+    margin: 0 0 30px 0;
+
+    font-family: MontserratMedium;
+    font-size: 22px;
 }
