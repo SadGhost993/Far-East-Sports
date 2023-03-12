@@ -14,13 +14,25 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('page/welcome');
 });
 
 Route::get('/rules', function (){
-   return view('rules');
+   return view('page/rules');
 });
 
 Route::get('/about', function (){
-   return view('about');
+   return view('page/about');
+});
+
+Route::get('/event', function (){
+   return view('page/event');
+});
+
+Route::get('/broadcast', function (){
+   return view('page/broadcast');
+});
+
+Route::get('/division', function (){
+   return view('page/divi');
 });
