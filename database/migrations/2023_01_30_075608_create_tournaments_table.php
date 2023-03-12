@@ -18,6 +18,9 @@ return new class extends Migration
             $table->integer('kind_of_sport_id');
             $table->integer('team_id');
             $table->integer('rival_id');
+            $table->integer('Location_of_the_tournament');
+            $table->integer('statistic');
+//            $table->integer('referee');
             $table->date('start');
             $table->date('end');
             $table->timestamps();
