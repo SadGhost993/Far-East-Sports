@@ -230,7 +230,7 @@
                 <input type="file" id="file" ref="file" v-on:change="handleFileUpload()"/>
                 <img src="{{Vite::asset('@/resources/img/icon/upload.png')}}" alt="">
                 <p>Загрузить новые команды</p>
-                <button v-on:click="submitFile()">Submit</button>
+                <button id="button">Submit</button>
             </label>
             <div class="info-match-btn-block__rigth-side">
                 <a class="info-match-btn-block__big-btn">
@@ -291,12 +291,49 @@
 </template>
 
 <script>
+import { ref, onMounted } from "vue";
+import {read, utils, writeFileXLSX} from 'xlsx';
+
+
 export default {
     methods: {
-        handleFileUpload() {
-            this.file = this.$refs.file.files[0];
-            console.log(this.$refs.file.files[0])
+        handleFileUpload(){
+            let selectedFile = this.$refs.file.files[0];
+            let fileReader = new FileReader();
+            fileReader.readAsBinaryString(selectedFile);
+            fileReader.onload = (event)=>{
+                let data = event.target.result;
+                console.log(data);
+                const workbook = read(data, {type: "binary"});
+                // console.log(workbook.Sheets);
+                workbook.SheetNames.forEach(sheet => {
+                    let rowObject = utils.sheet_to_row_object_array(workbook.Sheets[sheet])
+                    console.log(rowObject)
+                })
+
+            }
+
         }
-    },
-}
+    }};
+
+
+// export default {
+//     methods: {},
+// }
+//
+// let selectedFile;
+//
+// document.getElementById('input').addEventListener("change", (event) => {
+//     selectedFile = event.target.files[0];
+// })
+//
+// document.getElementById('button').addEventListener("click", () => {
+//     if (selectedFile) {
+//         let fileReader = new FileReader();
+//         fileReader.readAsBinaryString(selectedFile);
+//         fileReader.onload = (event) => {
+//             console.log(event.target.result);
+//         }
+//     }
+// })
 </script>
