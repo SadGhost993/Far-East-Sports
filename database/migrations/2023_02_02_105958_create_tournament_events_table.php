@@ -17,8 +17,15 @@ return new class extends Migration
             $table->id();
             $table->bigInteger('team_id');
             $table->integer('tournament_id');
-            $table->string('title');
+            $table->integer('match_time');
+            $table->integer('period_time');
+            $table->integer('period');
+            $table->string('event');
             $table->string('score');
+            $table->string('author_id');
+            $table->string('assistant_id');
+            $table->string('second_assistant_id');
+            $table->string('context');
             $table->timestamps();
         });
     }
