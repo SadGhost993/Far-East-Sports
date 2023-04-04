@@ -16,7 +16,16 @@ class KindOfSportSeeder extends Seeder
     public function run()
     {
         DB::table('kind_of_sports')->insert([
-            'title' => 'football'
+            ['title' => 'dvhl'],
+            ['title' => 'ice box'],
+            ['title' => 'volta football'],
+            ['title' => 'table tennis'],
+            ['title' => 'badminton'],
+            ['title' => 'footvolley'],
+            ['title' => 'smart hockey'],
+            ['title' => 'darts'],
+            ['title' => 'eSPORTS'],
+            ['title' => 'kabaddi'],
         ]);
     }
 }

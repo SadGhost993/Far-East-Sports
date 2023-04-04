@@ -17,6 +17,7 @@
         "vue": "^3.2.37"
     },
     "dependencies": {
+        "vue-drag-and-drop": "^3.0.0",
         "vue-router": "^4.1.6",
         "xlsx": "^0.18.5"
     }

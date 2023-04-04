@@ -3,6 +3,9 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Team;
+use App\Models\Tournament;
+use App\Models\TournamentEvent;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -15,7 +18,12 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
-           KindOfSportSeeder::class,
+            KindOfSportSeeder::class,
+            PlayerSeeder::class,
+            TeamSeeder::class,
+            TournamentSeeder::class,
+            TournamentEventSeeder::class,
+            DivisionSeeder::class,
         ]);
 
         // \App\Models\User::factory(10)->create();

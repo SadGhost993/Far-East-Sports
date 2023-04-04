@@ -15,13 +15,14 @@ return new class extends Migration
     {
         Schema::create('players', function (Blueprint $table) {
             $table->id();
-            $table->string('avatar');
+            $table->string('avatar')->nullable();
+            $table->integer('team_id')->nullable();
             $table->integer('player_number');
             $table->integer('element');
             $table->string('name');
-            $table->string('last_name');
-            $table->string('surname');
-            $table->date('birthday');
+            $table->string('last_name')->nullable();
+            $table->string('surname')->nullable();
+            $table->date('birthday')->nullable();
             $table->string('Role');
             $table->timestamps();
         });

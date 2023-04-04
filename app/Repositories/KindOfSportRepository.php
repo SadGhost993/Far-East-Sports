@@ -12,6 +12,11 @@ class KindOfSportRepository extends CoreRepository
         return Model::class;
     }
 
+    public function getTournamentByKindOfSport($kindOfSport)
+    {
+        return $this->startCondition()->where('title', '=', $kindOfSport)->with('tournament.tournamentEvent')->get();
+    }
+
     public function getKindOfSports()
     {
         return $this->startCondition()->get();

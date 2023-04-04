@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use \App\Http\Controllers\TournamentController;
+use \App\Http\Controllers\DivisionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,21 +27,12 @@ Route::get('/about', function (){
    return view('page/about');
 });
 
-Route::get('/event', function (){
-   return view('page/event');
-});
-
 Route::get('/broadcast', function (){
    return view('page/broadcast');
 });
 
-Route::get('/division', function (){
-   return view('page/divi');
-});
-
-Route::get('/scout', function (){
-   return view('page/scout');
-});
+Route::get('/divisions/{kindOfSport}', [DivisionController::class, 'getDivisions']);
+Route::get('/divisions/{kindOfSport}/{division}', [DivisionController::class, 'getDivision']);
 
 Route::get('/tournament', function (){
    return view('page/tournament');

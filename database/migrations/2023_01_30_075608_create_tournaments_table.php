@@ -16,13 +16,16 @@ return new class extends Migration
         Schema::create('tournaments', function (Blueprint $table) {
             $table->id();
             $table->integer('kind_of_sport_id');
+            $table->integer('division_id');
             $table->integer('team_id');
             $table->integer('rival_id');
             $table->integer('Location_of_the_tournament');
             $table->integer('statistic');
-//            $table->integer('referee');
-            $table->date('start');
-            $table->date('end');
+            $table->integer('first_referee');
+            $table->integer('second_referee');
+            $table->integer('third_referee');
+            $table->date('start')->nullable();
+            $table->date('end')->nullable();
             $table->timestamps();
         });
     }

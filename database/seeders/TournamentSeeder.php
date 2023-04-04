@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Tournament;
+use App\Models\TournamentEvent;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -14,6 +16,8 @@ class TournamentSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Tournament::factory(40)
+            ->has(TournamentEvent::factory(20))
+            ->create();
     }
 }

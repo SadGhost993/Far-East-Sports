@@ -2,44 +2,44 @@
 
 @section('content')
     <section class="kind-sport">
-        <a href="/event" class="hockey">
-            <img src="{{Vite::asset('resources/img/logo-dvhl.png')}}" alt="" class="kind-sport__big-img">
-            <p class="kind-sport__text">DVHL 3X3</p>
+        <a href="/divisions/DVHL-3X3" class="hockey">
+            <img src="{{Vite::asset('resources/img/kind-sport/dvhl.png')}}" alt="" class="kind-sport__big-img">
+            <p class="kind-sport__text">DVHL</p>
         </a>
         <a href="/" class="ice-box">
-            <img src="{{Vite::asset('resources/img/logo-box.png')}}" alt="" class="kind-sport__big-img">
+            <img src="{{Vite::asset('resources/img/kind-sport/ice-box.png')}}" alt="" class="kind-sport__big-img">
             <p class="kind-sport__text">ICE BOX</p>
         </a>
-        <a href="/division" class="volta-football">
+        <a href="/divisions/VOLTA-FOOTBALL" class="volta-football">
             <img src="{{Vite::asset('resources/img/kind-sport/volta-football.png')}}" alt="" class="kind-sport__img">
             <p class="kind-sport__text">VOLTA FOOTBALL</p>
         </a>
-        <a href="/table-tennis" class="table-tennis">
+        <a href="/divisions/TABLE-TENNIS" class="table-tennis">
             <img src="{{Vite::asset('resources/img/kind-sport/table-tennis.png')}}" alt="" class="kind-sport__img">
             <p class="kind-sport__text">TABLE TENNIS</p>
         </a>
-        <a href="/badminton" class="badminton">
+        <a href="/divisions/BADMINTON" class="badminton">
             <img src="{{Vite::asset('resources/img/kind-sport/badminton.png')}}" alt="" class="kind-sport__img">
             <p class="kind-sport__text">BADMINTON</p>
         </a>
-        <a href="/footvolley" class="footvolley">
+        <a href="/divisions/FOOTVOLLEY" class="footvolley">
             <img src="{{Vite::asset('resources/img/kind-sport/footvolley.png')}}" alt="" class="kind-sport__img">
             <p class="kind-sport__text">FOOTVOLLEY</p>
         </a>
-        <a href="/smart-hockey" class="smart-hockey">
+        <a href="/divisions/SMART-HOCKEY" class="smart-hockey">
             <img src="{{Vite::asset('resources/img/kind-sport/smart-hockey.png')}}" alt="" class="kind-sport__img">
             <p class="kind-sport__text">SMART HOCHEY</p>
         </a>
-        <a href="/darts" class="darts">
+        <a href="/divisions/DARTS" class="darts">
             <img src="{{Vite::asset('resources/img/kind-sport/darts.png')}}" alt="" class="kind-sport__img">
             <p class="kind-sport__text">DARTS</p>
         </a>
-        <a href="/e-sports" class="e-sports">
-            <img src="{{Vite::asset('resources/img/kind-sport/e-sports.png')}}" alt="" class="kind-sport__img">
+        <a href="/divisions/eSPORTS" class="e-sports">
+            <img src="{{Vite::asset('resources/img/kind-sport/esports.png')}}" alt="" class="kind-sport__img">
             <p class="kind-sport__text">eSPORTS</p>
         </a>
-        <a href="/habaddi" class="habaddi">
-            <img src="{{Vite::asset('resources/img/kind-sport/habaddi.png')}}" alt="" class="kind-sport__img">
+        <a href="/divisions/KABADDI" class="kabaddi">
+            <img src="{{Vite::asset('resources/img/kind-sport/kabaddi.png')}}" alt="" class="kind-sport__img">
             <p class="kind-sport__text">HABADOI</p>
         </a>
     </section>

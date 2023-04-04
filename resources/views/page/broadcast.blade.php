@@ -3,7 +3,7 @@
 @section('content')
     <section class="statistics">
         <div class="statistics__header">
-            <img class="statistics__image" src="{{Vite::asset('resources/img/logo-dvhl.png')}}" alt="">
+            <img class="statistics__image" src="{{Vite::asset("resources/img/kind-sport/$kindOfSport.png")}}" alt="">
             <p class="statistics__date">2023-01-30 15:30</p>
         </div>
         <div class="match-table">

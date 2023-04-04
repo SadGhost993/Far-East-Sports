@@ -5,15 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class KindOfSport extends Model
+class Division extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-      'title',
-    ];
-
-    public function tournament(){
+    public function tournaments(){
         return $this->hasMany(Tournament::class);
     }
 }

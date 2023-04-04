@@ -16,4 +16,24 @@ class Tournament extends Model
         'start',
         'end',
     ];
+
+    public function division(){
+        return $this->belongsTo(Division::class);
+    }
+
+    public function kindOfSport(){
+        return $this->belongsTo(KindOfSport::class);
+    }
+
+    public function tournamentEvents(){
+        return $this->hasMany(TournamentEvent::class);
+    }
+
+    public function team(){
+        return $this->belongsTo(Team::class);
+    }
+
+    public function rival(){
+        return $this->belongsTo(Team::class, 'rival_id');
+    }
 }

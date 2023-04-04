@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Player;
+use Database\Factories\PlayerFactory;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -14,6 +16,6 @@ class PlayerSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Player::factory(20)->create();
     }
 }

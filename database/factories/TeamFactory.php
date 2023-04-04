@@ -16,8 +16,19 @@ class TeamFactory extends Factory
      */
     public function definition()
     {
+        $teamName = [
+            'дружба',
+            'Кросс',
+            'PSG m',
+            'MANCHESTER UNITED m',
+            'BARCELONA m',
+            'REAL MADRID m',
+        ];
+
         return [
-            //
+            "kind_of_sport_id" => random_int(1, 8),
+            "title" => $teamName[random_int(0, 5)],
+            "hometown" => 'хабаровск',
         ];
     }
 }

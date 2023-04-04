@@ -5,21 +5,30 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreTournamentRequest;
 use App\Http\Requests\UpdateTournamentRequest;
 use App\Models\Tournament;
+use App\Repositories\KindOfSportRepository;
 use App\Repositories\TournamentRepository;
 use App\Services\TournamentService;
 
 class TournamentController extends Controller
 {
     public function __construct(
+        protected KindOfSportRepository $kindOfSportRepository,
         protected TournamentRepository $tournamentRepository,
         protected TournamentService    $tournamentService,
     )
     {
     }
 
-    public function index()
-    {
-        return $this->tournamentRepository->getTournament();
+    public function getDivisions($kindOfSport){
+        if ($kindOfSport === "DVHL-3X3"){
+            return view('page/event');
+        }
+
+        return view('page/divi', compact('kindOfSport'));
+    }
+
+    public function getDivision($kindOfSport){
+        return view('page/broadcast', compact('kindOfSport'));
     }
 
     public function show(Tournament $tournament)

@@ -15,4 +15,8 @@ class TournamentEvent extends Model
         'title',
         'score',
     ];
+
+    public function tournament(){
+        return $this->belongsTo(Tournament::class);
+    }
 }

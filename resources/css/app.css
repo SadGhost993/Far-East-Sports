@@ -354,14 +354,14 @@ p, h1, h2, h3, h4, h5, h6 {
     grid-area: e;
 }
 
-.habaddi {
+.kabaddi {
     grid-area: k;
 }
 
 .hockey, .ice-box, .volta-football,
 .table-tennis, .badminton, .footvolley,
 .smart-hockey, .darts, .e-sports,
-.habaddi {
+.kabaddi {
     display: flex;
     flex-direction: column;
 
@@ -2826,12 +2826,24 @@ p, h1, h2, h3, h4, h5, h6 {
     text-align: center;
     align-items: center;
 
-    min-width: 144px;
-    height: 144px;
+    min-width: 145px;
+    max-width: 145px;
+    height: 145px;
 
     margin-right: 20px;
 
     border: grey dotted 3px;
+
+    cursor:pointer;
+}
+
+.add-team-body__add-logo input{
+    display: none;
+}
+
+.add-team-body__preview-logo{
+    width: 100%;
+    /*height: 100%;*/
 }
 
 .add-team-body__add-player {
@@ -2843,7 +2855,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .add-team-body__wrapper {
     display: flex;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .add-team-body__title {
@@ -2885,7 +2897,7 @@ p, h1, h2, h3, h4, h5, h6 {
     margin-bottom: 30px;
 
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto 1fr;
 
     gap: 15px;
 
@@ -2934,11 +2946,60 @@ p, h1, h2, h3, h4, h5, h6 {
     font-size: 16px;
 }
 
-.players-block__player {
-    width: 100%;
-    height: 30px;
+.players-block__drop-zone {
+    display: flex;
+    flex-direction: column;
+    min-height: 30px;
+
+    padding: 5px;
 
     border: grey dotted 1px;
+}
+
+.reserve{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+
+}
+
+.line-block{
+    display: flex;
+    flex-direction: column;
+
+    width: 16px;
+    height: min-content;
+}
+
+.line-block__line{
+    width: 100%;
+    height: 2px;
+
+    margin-bottom: 3px;
+
+    background: black;
+}
+
+.line-block__line:last-of-type{
+    margin: 0;
+}
+
+.player{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 30px;
+    padding: 5px 10px 5px 10px;
+
+    background: #fff9ec;
+    border: 1px solid gainsboro;
+}
+
+.player__number{
+    font-weight: bold;
+}
+.player__name{
+    /*font-weight: bold;*/
 }
 
 .info-match-btn-block {

@@ -21,7 +21,7 @@ return new class extends Migration
             $table->integer('period_time');
             $table->integer('period');
             $table->string('event');
-            $table->string('score');
+//            $table->string('score');
             $table->string('author_id');
             $table->string('assistant_id');
             $table->string('second_assistant_id');

@@ -20,10 +20,21 @@
                 <p>0</p>
             </div>
             <div class="match-controls__match-statistics-output">
-                <p>Время матча: 00:00:00.0</p>
+                <p>Время матча:
+                    <stop-watch
+                        :currentTimer="currentTimer"
+                        :timerTitle="timeMatch"
+                        ref="stopWatch"
+                        hours="false"
+                        minutes
+                        @start="setStartTime()"
+                        @stop="setStopTime"
+                        @lap="setLapTime"/>
+                </p>
                 <p>Время периода: 00:00:00.0</p>
                 <p>Период: 1</p>
             </div>
+
             <div class="match-controls__match-score-right-output">
                 <p>0</p>
             </div>
@@ -47,11 +58,11 @@
             <div class="match-controls__pause-btn">
                 <p class="">Остановка матча</p>
             </div>
-            <div class="match-controls__has-puck-left-team-btn">
+            <div @click="$refs.stopWatch.start()" class="match-controls__has-puck-left-team-btn">
                 <p class="">Шайба у "Кросс"</p>
                 <p class="">0:00.0</p>
             </div>
-            <div class="match-controls__start-throw-in-btn">
+            <div @click="view" class="match-controls__start-throw-in-btn">
                 <p class="">Вбрасывание</p>
             </div>
             <div class="match-controls__has-puck-right-team-btn">
@@ -82,21 +93,45 @@
             <div class="match-controls__right-throw-in-btn">
                 <p class="">Вбрасывание выиграно</p>
             </div>
-            <div class="match-controls__left-team-small-btn-1">
+            <div class="match-controls__left-team-small-btn-1" @click="$refs.leftTeamFirstTrio.start()">
                 <p class="">На льду 1 3</p>
-                <p class="">0:00.0</p>
+                <stop-watch
+                    ref="leftTeamFirstTrio"
+                    hours="false"
+                    minutes="false"
+                    @start="setStartTime()"
+                    @stop="setStopTime"
+                    @lap="setLapTime"/>
             </div>
-            <div class="match-controls__left-team-small-btn-2">
+            <div class="match-controls__left-team-small-btn-2" @click="$refs.leftTeamSecondTrio.start()">
                 <p class="">На льду 2 3</p>
-                <p class="">0:00.0</p>
+                <stop-watch
+                    ref="leftTeamSecondTrio"
+                    hours="false"
+                    seconds="false"
+                    @start="setStartTime()"
+                    @stop="setStopTime"
+                    @lap="setLapTime"/>
             </div>
-            <div class="match-controls__left-team-small-btn-3">
+            <div class="match-controls__left-team-small-btn-3" @click="$refs.leftTeamThirdTrio.start()">
                 <p class="">На льду 3 3</p>
-                <p class="">0:00.0</p>
+                <stop-watch
+                    ref="leftTeamThirdTrio"
+                    hours="false"
+                    seconds="false"
+                    @start="setStartTime()"
+                    @stop="setStopTime"
+                    @lap="setLapTime"/>
             </div>
-            <div class="match-controls__left-team-small-btn-4">
+            <div class="match-controls__left-team-small-btn-4" @click="$refs.leftTeamFourthTrio.start()">
                 <p class="">На льду 4 3</p>
-                <p class="">0:00.0</p>
+                <stop-watch
+                    ref="leftTeamFourthTrio"
+                    hours="false"
+                    seconds="false"
+                    @start="setStartTime()"
+                    @stop="setStopTime"
+                    @lap="setLapTime"/>
             </div>
             <div class="match-controls__right-team-small-btn-1">
                 <p class="">На льду 1 3</p>
@@ -147,7 +182,28 @@
 </template>
 
 <script>
+import StopWatch from "./stopWatch.vue";
+
 export default {
-    name: 'Tournament',
-}
+
+    components: {
+        StopWatch,
+    },
+
+    methods: {
+        view() {
+            console.log(this.$refs.stopWatch.time)
+        },
+
+        setStartTime(timestamp) {
+            console.log(timestamp);
+        },
+        setStopTime(timestamp, formattedTime) {
+            console.log(timestamp, formattedTime);
+        },
+        setLapTime(timestamp, formattedTime, id) {
+            console.log(timestamp, formattedTime, id);
+        },
+    },
+};
 </script>
